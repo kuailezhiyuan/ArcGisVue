@@ -36,7 +36,7 @@ esriLoader
      * @param data 点击回调返回数据
      * @constructor
      */
-    gis.addPoint = function (x, y, data, map) {
+    gis.addPoint = function (map,x, y, data) {
       var point = new Point(x, y, new SpatialReference({wkid: 4326}))
       //目前项目使用海南当地坐标系，需要转换坐标系
       var simpleMarkerSymbol = new SimpleMarkerSymbol(SimpleMarkerSymbol.STYLE_CIRCLE, 25,
@@ -54,7 +54,7 @@ esriLoader
      * @param data 点击回调返回数据
      * @constructor
      */
-    gis.addPolyline = function (arr, data, map) {
+    gis.addPolyline = function (map,arr, data) {
       var polyline = new Polyline(arr, new SpatialReference({wkid: 4326}));
       //目前项目使用海南当地坐标系，需要转换坐标系
       var simpleLineSymbol = new SimpleLineSymbol(SimpleLineSymbol.STYLE_DASH, new Color([255, 0, 0]), 2)
@@ -70,7 +70,7 @@ esriLoader
      * @param data 点击回调返回数据
      * @constructor
      */
-    gis.addPolygon = function (arr, data, map) {
+    gis.addPolygon = function (map,arr, data) {
       var polygon = new Polygon(arr, new SpatialReference({wkid: 4326}))
       //目前项目使用海南当地坐标系，需要转换坐标系
       var simpleFillSymbol = new SimpleFillSymbol(SimpleFillSymbol.STYLE_SOLID,

@@ -34,12 +34,12 @@
                 let arr_point = [[110.26, 20.0], [110.21, 20.0], [110.22, 20.0], [110.23, 20.0], [110.231, 20.0]]
                 //遍历模拟数据添加点
                 arr_point.forEach((item, index, array) => {
-                  gis.addPoint(item[0], item[1], {name: "点 - "+index},map)
+                  gis.addPoint(map,item[0], item[1], {name: "点 - "+index})
                 })
                 //添加线
-                gis.addPolyline([[110.3, 20.0], [110.28, 20.1], [110.295, 20.2]], {name:"线"},map)
+                gis.addPolyline(map,[[110.3, 20.0], [110.28, 20.1], [110.295, 20.2]], {name:"线"})
                 //添加面
-                gis.addPolygon(arr_polygon, {name:"面"},map)
+                gis.addPolygon(map,arr_polygon, {name:"面"})
               })
           });
       },
