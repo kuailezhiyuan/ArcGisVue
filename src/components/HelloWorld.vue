@@ -1,6 +1,8 @@
 <template>
   <div class="hello">
+    <img src="@/assets/logo.png">
     <h1>{{ msg }}</h1>
+    <h1>{{ test }}</h1>
     <h2>Essential Links</h2>
     <ul>
       <li>
@@ -45,6 +47,9 @@
         </a>
       </li>
     </ul>
+    <h2>测试链接</h2>
+    <router-link to="/test">test</router-link>
+    <router-link to="/gis">gis</router-link>
     <h2>Ecosystem</h2>
     <ul>
       <li>
@@ -88,7 +93,8 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      test: 'Good!'
     }
   }
 }
